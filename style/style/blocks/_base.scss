@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@font-face {
+	font-family: 'mr_DopestyleG';
+	src: url('../fonts/mr_dopestyleg.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/mr_dopestyleg.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/mr_dopestyleg.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/mr_dopestyleg.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/mr_dopestyleg.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/mr_dopestyleg.svg#mr_dopestyleg') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+}
+.container {
+    max-width: 1150px;
+    padding: 0 25px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+@media(max-width:720px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,114 @@
+.catalog {
+    width: 100%;
+    padding: 50px 0;
+}
+.swiper-wrapper__catalog {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.content-swiper__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    width:50%;
+    box-shadow: -2px -2px 15px 5px rgba($color: #000000, $alpha: .3);
+    border-radius: 50px;
+    padding: 20px 0;
+}
+
+.swiper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 2px;
+    margin: 0;
+    width: 80%;
+    position: relative;
+}
+.swiper-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+}
+.swiper-title {
+    text-align: center;
+}
+.swiper-title h6 {
+    font-size: 26px;
+    font-weight: 700;
+}
+.swiper-price {
+    padding: 8px 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+.swiper-text {
+    text-align: left;
+    font-size: 20px;
+}
+.old-price {
+    text-decoration: line-through;
+}
+.swiper-btn a{
+    display: block;
+    padding: 10px 50px;
+    border-radius: 30px;
+    background-color: #fbd350;
+    font-size: 26px;
+    font-weight: 700;
+    transition: .5s;
+}
+
+.swiper-slide {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+.swiper-slide .big-slide__img {
+    width: 90%;
+    background-color: #fff;
+}
+.swiper-button-prev, .swiper-button-next {
+    color: #fbd350;
+}
+.kids {
+    opacity: .5;
+}
+
+@media(max-width:720px) {
+    .catalog {
+        padding: 25px 0;
+    }
+    .swiper-wrapper__catalog {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin: 25px 0
+    }
+    .content-swiper__wrapper {
+        width:100%;
+        padding: 0;
+        padding-bottom: 20px;
+    }
+    .kids h6{
+        display: none;
+    }
+
+}

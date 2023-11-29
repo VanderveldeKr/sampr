@@ -1,0 +1,130 @@
+.cover {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+.cover::after{
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translateX(50%);
+    background-image: url(/image/icon/box.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    rotate: -15deg;
+    width: 120px;
+    height: 150px;
+}
+.cover-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.cover-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    height: 90vh;
+}
+.cover-content__wrapper {
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.title {
+    font-size: calc(25px + 26 * ((100vw - 320px) / (1200 - 320)));
+    line-height: 90%;
+    font-weight: 900;
+}
+.subtitle-container {
+    text-align: center;
+    margin-right: auto;    
+}
+.subtitle {
+    padding: 10px 0;
+    font-family: 'mr_DopestyleG';
+    line-height: calc(32px + 10 * ((100vw - 320px) / (1200 - 320)));
+    font-size: calc(18px + 10 * ((100vw - 320px) / (1200 - 320)));
+    font-weight: 700;
+    color: #fbd350;
+}
+.cover-btn {
+    overflow: hidden;
+    position: relative;
+    width: 250px;
+    padding: 20px 0;
+    border-radius: 50px;
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    transition: .5s;
+    background: linear-gradient(180deg, #ffe51e 0%, #fbd350 100%);
+    box-shadow: 2px 5px 5px rgba($color: #fbd350, $alpha: .5);
+}
+
+.cover-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+    opacity: 0; /* Добавляем начальное состояние прозрачности */
+  }
+  
+  .cover-btn:hover::after {
+    opacity: 1; /* Изменяем прозрачность для hover-состояния */
+    animation: sheen 1s forwards;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes sheen {
+    100% {
+      transform: rotateZ(60deg) translate(1em, -8em);
+    }
+  }
+.cover-image{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: 90vh;
+    z-index: -1;
+}
+
+@media(max-width:720px) {
+    .cover {
+        height: 80vh;
+        overflow: hidden;
+    }
+    .cover-btn {
+        width: 200px;
+        padding: 15px 0;
+        font-size: 18px;
+    }
+    .cover-image{
+        right: -50px;
+        height: 60vh;
+    }
+    .cover-content {
+        margin-top: 30%;
+        display: block;
+    }
+    .cover::after{
+        bottom: 10%;
+        right: 87%;    
+        width: 70px;
+        height: 80px;
+    }
+
+}
+

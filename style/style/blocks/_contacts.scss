@@ -1,0 +1,150 @@
+.contacts {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.contacts-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.contacts-title {
+  width: 100%;
+}
+
+.contacts-title__text {
+  font-size: 120px;
+  line-height: 110px;
+}
+
+.contacts-info {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.contacts-card {
+  padding: 20px;
+  border: 3px solid #000000;
+  border-radius: 30px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 100px;
+}
+
+.contacts-card__img {
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+}
+.contacts-card__img img{
+  max-width: 100%;
+  border-radius: 50px;
+}
+
+.contacts-card__img img {
+  max-width: 100%;
+}
+
+.contacts-card__text {
+  padding: 23px 18px;
+  border-radius: 30px;
+  border: 2px solid #000000;
+}
+
+.contacts-card__text p {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.contacts-data {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-top: auto;
+  padding-bottom: 170px;
+}
+
+.contacts-data::before {
+  content: '';
+  position: absolute;
+  background-image: url(/image/social/girl2.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+
+.contacts-data__text {
+  width: 465px;
+  padding: 25px;
+  border-radius: 30px;
+  border: 2px solid #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contacts-data__text p, a {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.contacts-data__btn button {
+  padding: 17px 50px;
+  border-radius: 30px;
+  text-transform: uprgb(0, 0, 0)ase;
+  background-color: #fbd350;
+  font-size: 22px;
+  font-weight: 600;
+  transition: .5s;
+}
+
+.contacts-data__social ul {
+  display: flex;
+  gap: 10px;
+}
+
+.contacts-data__social ul li {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+.contacts-data__social ul li a img{
+  width: 70px;
+  height: 70px;
+}
+
+.contacts-wrapper__mobile {
+  display: none;
+}
+
+@media(max-width:720px) {
+  .contacts-wrapper__mobile {
+    display: block;
+  }
+  .contacts-wrapper__desktop {
+    display: none;
+  }
+  .contacts-data::before {
+    display: none;
+  }
+  .contacts-card {
+    width: 100%;
+    align-items: center;
+    gap: 35px;
+  }
+}
